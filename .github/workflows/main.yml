@@ -9,48 +9,39 @@ on:
       - master
  
 jobs:
-  api-tests:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
- 
-      - name: Install dependencies
-        run: |
-          npm install
-
-      - name: Run API tests
-        run: |
-          npx cypress run --spec cypress/e2e/APITesting.cy.js
- 
   ui-tests:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
- 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
- 
       - name: Install dependencies
         run: |
           npm install
- 
       - name: Run UI tests
         run: |
           npx cypress run --spec cypress/e2e/UITesting.cy.js
+
+  api-tests:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: |
+          npm install
+      - name: Run API tests
+        run: |
+          npx cypress run --spec cypress/e2e/APITesting.cy.js
+  
 
  
