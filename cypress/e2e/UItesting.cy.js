@@ -21,7 +21,7 @@ describe('UI testing', () => {
     cy.visit(Cypress.env('baseUrl'))
   })
   
-  //Test Case 1: Register User
+  //Test Case 1: Register  User
   it('Register User', () => {
     const homePage = new HomePage()
     homePage.VerifyHomePageVisible()
