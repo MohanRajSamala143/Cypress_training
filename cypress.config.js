@@ -6,7 +6,8 @@ async function setupNodeEvents(on, config) {
 module.exports = defineConfig({
   defaultCommandTimeout: 15000,
   env: {
-      baseUrl: 'http://automationexercise.com'
+      baseUrl: 'http://automationexercise.com',
+      APIbaseUrl: 'https://automationexercise.com/api/productsList'
   },
   e2e: {
     setupNodeEvents

@@ -1,0 +1,27 @@
+{
+  "userName": "Mohan",
+  "Gender": "male",
+  "password": "Mohan100$",
+  "DOB": {
+      "year": "1999",
+      "month": "January",
+      "date": "1"
+  },
+  "firstName": "Mohan",
+  "lastName": "Samala",
+  "companyName":"cognizant",
+  "addressLine1":"'1-11,Hakimpet'",
+  "adderssLine2": "Secunderabad",
+  "country": "India",
+  "stage": "Telangana",
+  "city": "Hyderabad",
+  "zipcode": "500078",
+  "mobileNumber": "9876543212",
+  "infantDOB": {
+      "year": "2023",
+      "month": "10",
+      "date": "22"
+  },
+  "validEmail": "Mohan7730@gmail.com",
+  "validPassword": "Mohan100$"
+}
